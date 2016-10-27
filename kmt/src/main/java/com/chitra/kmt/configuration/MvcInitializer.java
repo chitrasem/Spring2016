@@ -4,11 +4,12 @@ import javax.servlet.Filter;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-public class KmtInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
- 
+
+public class MvcInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
+	 
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return new Class[] { KmtConfiguration.class };
+        return new Class[] { MainConfig.class };
     }
   
     @Override
@@ -20,11 +21,10 @@ public class KmtInitializer extends AbstractAnnotationConfigDispatcherServletIni
     protected String[] getServletMappings() {
         return new String[] { "/" };
     }
-    
     @Override
     protected Filter[] getServletFilters() {
-    	Filter [] singleton = { new CORSFilter()};
-    	return singleton;
+        Filter [] singleton = { new CORSFilter()};
+        return singleton;
     }
  
 }
