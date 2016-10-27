@@ -1,4 +1,4 @@
-package com.chitra.kms.entity;
+package com.chitra.kmt.model;
 
 public enum UserProfileType {
     USER("USER"),

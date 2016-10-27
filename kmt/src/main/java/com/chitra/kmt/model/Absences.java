@@ -1,4 +1,4 @@
-package com.chitra.kmt.model
+package com.chitra.kmt.model;
 
 public class Absences {
 

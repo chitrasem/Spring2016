@@ -1,4 +1,4 @@
-package com.chitra.kms.entity;
+package com.chitra.kmt.model;
 
 import java.util.HashSet;
 import java.util.Set;

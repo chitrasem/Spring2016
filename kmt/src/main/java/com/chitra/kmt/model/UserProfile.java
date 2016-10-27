@@ -1,4 +1,4 @@
-package com.chitra.kms.entity;
+package com.chitra.kmt.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

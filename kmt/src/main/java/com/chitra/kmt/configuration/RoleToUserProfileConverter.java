@@ -4,8 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
 
-import com.chitra.kms.entity.UserProfile;
-import com.chitra.kms.service.UserProfileService;
+import com.chitra.kmt.model.UserProfile;
+
 
 @Component
 public class RoleToUserProfileConverter implements Converter<Object, UserProfile>
