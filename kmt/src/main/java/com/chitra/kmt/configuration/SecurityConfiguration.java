@@ -63,10 +63,12 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
       
       http.authorizeRequests()
         .antMatchers("/", "/home").permitAll()    
-        .antMatchers("/dashboard/users","/dashboard/users/**").access("hasRole('DIRECTOR')")
+        
+       /* .antMatchers("/dashboard/users","/dashboard/users/**").access("hasRole('DIRECTOR')")
         .antMatchers("/dashboard/admin/**").access("hasRole('TEACHER') or hasRole('DIRECTOR')")
         .antMatchers("/dashboard/account/**").access("hasRole('ACCOUNTANT') or hasRole('DIRECTOR')")
         .antMatchers("/dashboard","/dashboard/**").access("hasRole('TEACHER') or hasRole('DIRECTOR') or hasRole('ACCOUNTANT') ")
+        */
         .and().formLogin().loginPage("/login").successHandler(customSuccessHandler)
         .usernameParameter("ssoId").passwordParameter("password")
         .and().rememberMe().rememberMeParameter("remember-me").tokenRepository(persistentTokenRepository());

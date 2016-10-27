@@ -13,10 +13,7 @@ import com.chitra.kmt.model.Book;
 @Controller
 public class IndexController {
 	
-	@RequestMapping(value="/")
-	public ModelAndView showHome(){		
-		return new ModelAndView("redirect:home");		
-	}
+	
 	
 	@RequestMapping(value="/uploading")
 	public String uploadingFile(){

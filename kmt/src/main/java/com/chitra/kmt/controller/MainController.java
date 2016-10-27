@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.chitra.kmt.model.User;
 import com.chitra.kmt.model.UserProfile;
@@ -44,6 +45,31 @@ public class MainController {
 	 * SSOIdUtils
 	 */
 	SSOIdUtil sSOIdUtil = new SSOIdUtil();
+	
+	
+	/*New Edition
+	 * 
+	 * 
+	 */
+	@RequestMapping(value="/")
+	public ModelAndView indexPage(){		
+		return new ModelAndView("redirect:kmt_1000_1000");		
+	}
+	@RequestMapping(value="kmt_1000_1000")
+	public String showDashboard(Model m){
+		//m.addAttribute("user", getUser());		
+		return "dashboard/kmt_1000_1000_view";
+	}
+	
+	@RequestMapping(value="kmt_2000_1000")
+	public String showUser(Model m){
+		//m.addAttribute("user", getUser());		
+		return "dashboard/kmt_2000_1000_view";
+	}
+	
+	
+	
+	//End New Edition
 	
 	@RequestMapping(value="/dashboard/event")
 	public String showAllEvent(Model m){			
@@ -80,12 +106,7 @@ public class MainController {
 	 * @param m
 	 * @return
 	 */
-	@RequestMapping(value="/dashboard")
-	public String showDashboard(Model m){
-		m.addAttribute("user", getUser());		
-		
-		return "/dashboard/index";		
-	}
+
 	
 	@RequestMapping(value="/dashboard/contact", method = RequestMethod.GET)
 	public String showContactList(Model m){			
