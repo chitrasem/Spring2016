@@ -5,6 +5,7 @@ import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
 
 import com.chitra.kmt.model.UserProfile;
+import com.chitra.kmt.service.UserProfileService;
 
 
 @Component

@@ -1,14 +1,14 @@
-package com.chitra.kmt.service;
+package com.chitra.kmt.dao;
 
 import java.util.List;
 
 import com.chitra.kmt.model.User;
 
-public interface UserService {
+public interface UserDao {
 	 
     User findById(int id);
      
-    User findBySso(String sso);
+    User findBySSO(String sso);
     
     void save(User user);
     
