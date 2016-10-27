@@ -59,24 +59,13 @@ public class Student {
     @JoinColumn(name = "USER_ID")
     private User user;
     
-    @ManyToOne(optional = false)
-    @JoinColumn(name="P_ID")
-    private Parents parents;
     
-   
-	public Parents getParents() {
-		return parents;
-	}
-	public void setParents(Parents parents) {
-		this.parents = parents;
-	}
+ 
 	@ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "APP_STUDENT_SUBJECT",
     		joinColumns = { @JoinColumn(name = "STUDENT_ID")},
     		inverseJoinColumns = { @JoinColumn(name = "SUBJECT_ID")}
     		)
-    @LazyCollection(LazyCollectionOption.FALSE)
-    private List<Subject> subjects = new ArrayList<Subject>();
 	
 	public User getUser() {
 		return user;
@@ -84,12 +73,7 @@ public class Student {
 	public void setUser(User user) {
 		this.user = user;
 	}
-	public List<Subject> getSubjects() {
-		return subjects;
-	}
-	public void setSubjects(List<Subject> subjects) {
-		this.subjects = subjects;
-	}
+	
 	public int getId() {
 		return id;
 	}
