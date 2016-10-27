@@ -53,25 +53,25 @@ public class MainController {
 	 */
 	@RequestMapping(value="/")
 	public ModelAndView indexPage(){		
-		return new ModelAndView("redirect:kmt_1000_1000");		
+		return new ModelAndView("redirect:kmt_1000_1000.act");		
 	}
-	@RequestMapping(value="kmt_1000_1000")
+	@RequestMapping(value="kmt_1000_1000.act")
 	public String showDashboard(Model m){
 		//m.addAttribute("user", getUser());		
 		return "dashboard/kmt_1000_1000_view";
 	}
 	
-	@RequestMapping(value="kmt_2000_1000")
+	@RequestMapping(value="kmt_2000_1000.act")
 	public String showUsers(Model m){
 		//m.addAttribute("user", getUser());		
 		return "dashboard/kmt_2000_1000_view";
 	}
-	@RequestMapping(value="kmt_2000_2000")
+	@RequestMapping(value="kmt_2000_2000.act")
 	public String showTeachers(Model m){
 		//m.addAttribute("user", getUser());		
 		return "dashboard/kmt_2000_2000_view";
 	}
-	@RequestMapping(value="kmt_2000_3000")
+	@RequestMapping(value="kmt_2000_3000.act")
 	public String showStudents(Model m){
 		//m.addAttribute("user", getUser());		
 		return "dashboard/kmt_2000_30000_view";

@@ -185,19 +185,20 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <h4 class="pull-left page-title"><c:out value="${fn:trim(bodyTitle)}" /></h4>
-                                <ol class="breadcrumb pull-right">
+                                <%-- <ol class="breadcrumb pull-right">
                                     <li><a href="#">Moltran <c:out value="${fn:trim(bodyTitle)}" /></a></li>
                                     <li><a href="#">Pages <c:out value="${fn:trim(bodyTitle)}" /></a></li>
                                     <li class="active">Blank Page <c:out value="${fn:trim(bodyTitle)}" /></li>
-                                </ol>
+                                </ol> --%>
                             </div>
                         </div>
+                        
                         <jsp:doBody />
                         
                         
 
                         <!-- Pls Remove -->
-                        <div style="height:600px;"></div>
+                        <!-- <div style="height:600px;"></div> -->
                        
 
 
