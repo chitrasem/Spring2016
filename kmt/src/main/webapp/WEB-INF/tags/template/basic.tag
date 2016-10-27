@@ -38,8 +38,19 @@
                     <div id="sidebar-menu">
                         <ul>
                             <li>
-                                <a href="<c:url value="/dashboard"/>" class="waves-effect"><i class="md md-home"></i><span> Dashboard </span></a>
+                                <a href="<c:url value="/kmt_1000_1001"/>" class="waves-effect"><i class="md md-home"></i><span> Dashboard </span></a>
                             </li>
+                            
+                             <li class="has_sub">
+                                <a href="#" class="waves-effect"><i class="md md-people"></i><span> People </span><span class="pull-right"><i class="md md-add"></i></span></a>
+                                <ul class="list-unstyled">
+                                    <li><a href="<c:url value="/kmt_2000_1001"/>">Manage Users</a></li>
+                                    <li><a href="<c:url value="/kmt_2000_1002"/>">Manage Teachers</a></li>
+                                    <li><a href="<c:url value="/kmt_2000_1003"/>">Manage Students</a></li>
+                                </ul>
+                            </li>
+                            
+                            
                             <li>
                                 <a href="<c:url value="/dashboard/contact"/>" class="waves-effect"><i class="md md-contacts"></i><span> Contact List </span></a>
                             </li>

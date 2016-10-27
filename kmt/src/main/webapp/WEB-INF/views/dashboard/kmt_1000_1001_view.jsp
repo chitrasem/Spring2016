@@ -5,10 +5,9 @@
 		<div class="container">
 
 			<!-- Pls Remove -->
-			<div style="height: 600px;"></div>
 			
 			<div>
-				<a href="">Manage User</a>
+				<a href="<c:url value="/kmt_2000_1000"/>"">Manage User</a>
 			</div>
 
 
