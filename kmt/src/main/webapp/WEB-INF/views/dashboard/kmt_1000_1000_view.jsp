@@ -7,7 +7,9 @@
 			<!-- Pls Remove -->
 			
 			<div>
-				<a href="<c:url value="/kmt_2000_1000"/>"">Manage User</a>
+				<a href="<c:url value="/kmt_2000_1001"/>"">Manage Users</a>
+				<a href="<c:url value="/kmt_2000_1001"/>"">Manage Teachers</a>
+				<a href="<c:url value="/kmt_2000_1001"/>"">Manage Students</a>
 			</div>
 
 

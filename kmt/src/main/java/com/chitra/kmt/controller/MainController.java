@@ -62,9 +62,19 @@ public class MainController {
 	}
 	
 	@RequestMapping(value="kmt_2000_1000")
-	public String showUser(Model m){
+	public String showUsers(Model m){
 		//m.addAttribute("user", getUser());		
 		return "dashboard/kmt_2000_1000_view";
+	}
+	@RequestMapping(value="kmt_2000_2000")
+	public String showTeachers(Model m){
+		//m.addAttribute("user", getUser());		
+		return "dashboard/kmt_2000_2000_view";
+	}
+	@RequestMapping(value="kmt_2000_3000")
+	public String showStudents(Model m){
+		//m.addAttribute("user", getUser());		
+		return "dashboard/kmt_2000_30000_view";
 	}
 	
 	
