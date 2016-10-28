@@ -38,23 +38,27 @@ public class IndexController {
 	}
 	@RequestMapping(value="kmt_1000_1000.act")
 	public String showDashboard(Model m){
+		
 		m.addAttribute("user", getUser());		
 		return "dashboard/kmt_1000_1000_view";
 	}
 	
 	@RequestMapping(value="kmt_2000_1000.act")
 	public String showUsers(Model m){
-		//m.addAttribute("user", getUser());		
+		m.addAttribute("user", getUser());		
+		User user = getUser();
+		System.out.println(user.getFirstName());
 		return "dashboard/kmt_2000_1000_view";
 	}
 	@RequestMapping(value="kmt_2000_2000.act")
 	public String showTeachers(Model m){
-		//m.addAttribute("user", getUser());		
+		m.addAttribute("user", getUser());		
 		return "dashboard/kmt_2000_2000_view";
 	}
 	@RequestMapping(value="kmt_2000_3000.act")
 	public String showStudents(Model m){
-		//m.addAttribute("user", getUser());		
+		
+		m.addAttribute("user", getUser());		
 		return "dashboard/kmt_2000_3000_view";
 	}
 	

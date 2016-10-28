@@ -36,6 +36,11 @@ public class MainController {
 	
 	
 	
+	
+	
+	
+	
+	
 	@RequestMapping(value="/test/modal")
 	public String testModalPage(Model m){			
 		User user =  userService.findBySso(sSOIdUtil.getPrincipal());
@@ -108,19 +113,6 @@ public class MainController {
         return "/accessDenied";
     }
     
-    @RequestMapping(value="/dashboard/users", method = RequestMethod.GET)
-    public String showUsers(ModelMap m){
-        m.addAttribute("user", getUser());
-    	//List<User> users = userService.findAllUsers();
-    	//m.addAttribute("usesr", users);
-    	
-    	return "/dashboard/users";
-    }
-    @RequestMapping(value="/dashboard/students", method = RequestMethod.GET)
-    public String showStudents(ModelMap m){
-        m.addAttribute("user", getUser());    	
-    	return "/dashboard/students";
-    }
     
     /**
      * 
