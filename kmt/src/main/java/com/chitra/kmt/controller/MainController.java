@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.ModelAndView;
 
 import com.chitra.kmt.model.User;
 import com.chitra.kmt.model.UserProfile;
@@ -28,81 +27,15 @@ import com.chitra.kmt.utils.SSOIdUtil;
  
 @Controller
 public class MainController { 
-	
-	/**
-	 * user service
-	 */
 	@Autowired
 	UserService userService;
-	
-	/**
-	 * UserProfileService
-	 */
 	@Autowired
 	UserProfileService userProfileService;
-	
-	/**
-	 * SSOIdUtils
-	 */
 	SSOIdUtil sSOIdUtil = new SSOIdUtil();
 	
 	
-	/*New Edition
-	 * 
-	 * 
-	 */
-	@RequestMapping(value="/")
-	public ModelAndView indexPage(){		
-		return new ModelAndView("redirect:kmt_1000_1000.act");		
-	}
-	@RequestMapping(value="kmt_1000_1000.act")
-	public String showDashboard(Model m){
-		//m.addAttribute("user", getUser());		
-		return "dashboard/kmt_1000_1000_view";
-	}
-	
-	@RequestMapping(value="kmt_2000_1000.act")
-	public String showUsers(Model m){
-		//m.addAttribute("user", getUser());		
-		return "dashboard/kmt_2000_1000_view";
-	}
-	@RequestMapping(value="kmt_2000_2000.act")
-	public String showTeachers(Model m){
-		//m.addAttribute("user", getUser());		
-		return "dashboard/kmt_2000_2000_view";
-	}
-	@RequestMapping(value="kmt_2000_3000.act")
-	public String showStudents(Model m){
-		//m.addAttribute("user", getUser());		
-		return "dashboard/kmt_2000_3000_view";
-	}
 	
 	
-	
-	//End New Edition
-	
-	@RequestMapping(value="/dashboard/event")
-	public String showAllEvent(Model m){			
-		User user =  userService.findBySso(sSOIdUtil.getPrincipal());
-		m.addAttribute("user", user);
-		return "/dashboard/event";
-		
-	}
-	@RequestMapping(value="/dashboard/payment")
-	public String paymentPage(Model m){			
-		User user =  userService.findBySso(sSOIdUtil.getPrincipal());
-		m.addAttribute("user", user);
-		return "/dashboard/payment";
-		
-	}
-	@RequestMapping(value="/dashboard/classroom")
-	public String classroomPage(Model m){			
-		User user =  userService.findBySso(sSOIdUtil.getPrincipal());
-		m.addAttribute("user", user);
-		
-		return "/dashboard/classRoom";
-		
-	}
 	@RequestMapping(value="/test/modal")
 	public String testModalPage(Model m){			
 		User user =  userService.findBySso(sSOIdUtil.getPrincipal());
@@ -139,18 +72,6 @@ public class MainController {
 		return "/dashboard/profile";
 		
 	}
-	
-	
-    /**
-     * 
-     * @param model
-     * @return
-     */
-    @RequestMapping(value = "/db", method = RequestMethod.GET)
-    public String dbaPage(ModelMap model) {
-        model.addAttribute("user", sSOIdUtil.getPrincipal());
-        return "dba";
-    }
     
     /**
      * 
