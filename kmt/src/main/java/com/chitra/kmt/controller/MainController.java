@@ -74,7 +74,7 @@ public class MainController {
 	@RequestMapping(value="kmt_2000_3000.act")
 	public String showStudents(Model m){
 		//m.addAttribute("user", getUser());		
-		return "dashboard/kmt_2000_30000_view";
+		return "dashboard/kmt_2000_3000_view";
 	}
 	
 	

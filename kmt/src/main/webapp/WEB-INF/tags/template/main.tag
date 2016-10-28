@@ -65,7 +65,7 @@
                 <!-- LOGO -->
                 <div class="topbar-left">
                     <div class="text-center">
-                        <a href="index.html" class="logo"><i class="md md-terrain"></i> <span>KMS </span></a>
+                        <a href="<c:url value="kmt_1000_1000.act"/>" class="logo"><i class="md md-terrain"></i> <span>KMT </span></a>
                     </div>
                 </div>
                 <!-- Button mobile view to collapse sidebar menu -->
@@ -146,9 +146,9 @@
                                 <li class="hidden-xs">
                                     <a href="#" id="btn-fullscreen" class="waves-effect waves-light"><i class="md md-crop-free"></i></a>
                                 </li>
-                                <li class="hidden-xs">
+                              <!--   <li class="hidden-xs">
                                     <a href="#" class="right-bar-toggle waves-effect waves-light"><i class="md md-chat"></i></a>
-                                </li>
+                                </li> -->
                                 <li class="dropdown">
                                     <a href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img src="<c:url value="/static/images/avatar-1.jpg" />" alt="user-img" class="img-circle"> </a>
                                     <ul class="dropdown-menu">
@@ -170,6 +170,22 @@
             <!-- ========== Left Sidebar Start ========== -->
             <jsp:invoke fragment="navigationContent" />            
             <!-- Left Sidebar End --> 
+            
+
+            <!-- Right Sidebar -->
+            <div class="side-bar right-bar nicescroll">
+                <h4 class="text-center">Filter</h4>
+                <div class="contact-list nicescroll">
+                    <ul class="list-group contacts-list">
+                        <li class="list-group-item">
+                            <input type="text">
+                            <span class="clearfix"></span>
+                        </li>
+                    </ul>  
+                </div>
+            </div>
+            <!-- /Right-bar -->            
+            
 
 
 
@@ -211,157 +227,11 @@
                 </footer>
 
             </div>
-           
-            <!-- ============================================================== -->
-            <!-- End Right content here -->
-            <!-- ============================================================== -->
 
 
-            <!-- Right Sidebar -->
-            <div class="side-bar right-bar nicescroll">
-                <h4 class="text-center">Chat</h4>
-                <div class="contact-list nicescroll">
-                    <ul class="list-group contacts-list">
-                        <li class="list-group-item">
-                            <a href="#">
-                                <div class="avatar">
-                                    <img src="<c:url value="/static/images/users/avatar-1.jpg" />" alt="">
-                                </div>
-                                <span class="name">Chadengle</span>
-                                <i class="fa fa-circle online"></i>
-                            </a>
-                            <span class="clearfix"></span>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="#">
-                                <div class="avatar">
-                                    <img src="<c:url value="/static/images/users/avatar-2.jpg" />" alt="">
-                                </div>
-                                <span class="name">Tomaslau</span>
-                                <i class="fa fa-circle online"></i>
-                            </a>
-                            <span class="clearfix"></span>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="#">
-                                <div class="avatar">
-                                    <img src="<c:url value="/static/images/users/avatar-3.jpg" />" alt="">
-                                </div>
-                                <span class="name">Stillnotdavid</span>
-                                <i class="fa fa-circle online"></i>
-                            </a>
-                            <span class="clearfix"></span>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="#">
-                                <div class="avatar">
-                                    <img src="<c:url value="/static/images/users/avatar-4.jpg" />" alt="">
-                                </div>
-                                <span class="name">Kurafire</span>
-                                <i class="fa fa-circle online"></i>
-                            </a>
-                            <span class="clearfix"></span>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="#">
-                                <div class="avatar">
-                                    <img src="<c:url value="/static/images/users/avatar-5.jpg" />" alt="">
-                                </div>
-                                <span class="name">Shahedk</span>
-                                <i class="fa fa-circle away"></i>
-                            </a>
-                            <span class="clearfix"></span>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="#">
-                                <div class="avatar">
-                                    <img src="<c:url value="/static/images/users/avatar-6.jpg" />" alt="">
-                                </div>
-                                <span class="name">Adhamdannaway</span>
-                                <i class="fa fa-circle away"></i>
-                            </a>
-                            <span class="clearfix"></span>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="#">
-                                <div class="avatar">
-                                    <img src="<c:url value="/static/images/users/avatar-7.jpg" />" alt="">
-                                </div>
-                                <span class="name">Ok</span>
-                                <i class="fa fa-circle away"></i>
-                            </a>
-                            <span class="clearfix"></span>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="#">
-                                <div class="avatar">
-                                    <img src="<c:url value="/static/images/users/avatar-8.jpg" />" alt="">
-                                </div>
-                                <span class="name">Arashasghari</span>
-                                <i class="fa fa-circle offline"></i>
-                            </a>
-                            <span class="clearfix"></span>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="#">
-                                <div class="avatar">
-                                    <img src="<c:url value="/static/images/users/avatar-9.jpg" />"alt="">
-                                </div>
-                                <span class="name">Joshaustin</span>
-                                <i class="fa fa-circle offline"></i>
-                            </a>
-                            <span class="clearfix"></span>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="#">
-                                <div class="avatar">
-                                    <img src="<c:url value="/static/images/users/avatar-10.jpg" />" alt="">
-                                </div>
-                                <span class="name">Sortino</span>
-                                <i class="fa fa-circle offline"></i>
-                            </a>
-                            <span class="clearfix"></span>
-                        </li>
-                    </ul>  
-                </div>
-            </div>
-            <!-- /Right-bar -->
 
 
         </div>
         <!-- END wrapper -->
-    
-        <script>
-            var resizefunc = [];
-        </script>
-
-        <!-- jQuery  -->
-        
-        <script src="<c:url value="/static/js/bootstrap.min.js" />"></script>
-        <script src="<c:url value="/static/js/waves.js" />"></script>
-        <script src="<c:url value="/static/js/wow.min.js" />"></script>
-        <script src="<c:url value="/static/js/jquery.nicescroll.js" />" type="text/javascript"></script>
-        <script src="<c:url value="/static/js/jquery.scrollTo.min.js" />"></script>
-        <script src="<c:url value="/static/assets/jquery-detectmobile/detect.js" />"></script>
-        <script src="<c:url value="/static/assets/fastclick/fastclick.js" />"></script>
-        <script src="<c:url value="/static/assets/jquery-slimscroll/jquery.slimscroll.js" />"></script>
-        <script src="<c:url value="/static/assets/jquery-blockui/jquery.blockUI.js" />"></script>
-       	
-       	<script src="<c:url value="/static/js/jquery-ui-1.10.1.custom.min.js" />"></script>
-        <script src="<c:url value="/static/assets/select2/select2.min.js" />" type="text/javascript"></script>
-       
-
-
-        <!-- CUSTOM JS -->
-        <script src="<c:url value="/static/js/jquery.app.js" />"></script>
-        
-        <!-- Data Table -->
-        <script src="<c:url value="/static/assets/datatables/jquery.dataTables.min.js" />"></script>
-        <script src="<c:url value="/static/assets/datatables/dataTables.bootstrap.js" />"></script>
-        <!-- BEGIN PAGE SCRIPTS -->
-        <script src="<c:url value="/static/assets/fullcalendar/moment.min.js" />"></script>
-        <script src="<c:url value="/static/assets/fullcalendar/fullcalendar.min.js"/> "></script>
-        <script src="<c:url value="/static/assets/fullcalendar/fullcalendar.js" />"></script>
-        
     </body>
 </html>

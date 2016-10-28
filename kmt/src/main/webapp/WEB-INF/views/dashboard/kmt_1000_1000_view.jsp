@@ -19,5 +19,6 @@
 	</div>
 	<!-- content -->
 
+    <%@include file="../../views/dashboard/footer.jsp" %>
 
 </template:basic>
